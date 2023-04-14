@@ -1,4 +1,14 @@
 <?php
+
+try
+{
+	$db = new PDO('mysql:host=localhost;dbname=date_calendar;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+
 $months = array('', 'Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
 if (isset($_GET['month']) && isset($_GET['years'])) {
     $userMonth = $_GET['month'];
