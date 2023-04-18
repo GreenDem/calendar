@@ -2,7 +2,7 @@
 
 try
 {
-	$db = new PDO('mysql:host=localhost;dbname=date_calendar;charset=utf8', 'root', 'root');
+	$db = new PDO('mysql:host=localhost;dbname=date_calendar;charset=utf8', 'root', '',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 }
 catch (Exception $e)
 {
